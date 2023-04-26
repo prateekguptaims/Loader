@@ -1,0 +1,56 @@
+*{margin: 0;padding: 0;}
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Loader{
+    height: 300px;
+    width: 300px;
+    /* border: 0.5px solid #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.Loader .Load{
+    height: 100px;
+    width: 100px;
+    /* border: 0.5px solid #fff; */
+    position: relative;
+}
+.Load::before, .Load::after{
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border-radius: 50%;
+    animation: Rotate 1s linear infinite;
+}
+.Load::before{
+   background-color: rgb(255, 83, 112);
+}
+.Load::after{
+    background-color: rgb(83, 163, 255);
+    animation-delay: 0.5s ;
+ }
+@keyframes Rotate {
+    0%,100%{
+        left:100px;
+    }
+    25%{
+        transform: scale(0.2);
+    }
+    50%{
+        left:0px;
+    }
+    75%{
+        transform: scale(1);
+    }
+}
